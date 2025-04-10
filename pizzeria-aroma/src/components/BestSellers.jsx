@@ -21,6 +21,17 @@ const BestSellers = () => {
           price="7.99€" 
           image="/images/vegan.jpg" 
         />
+          <ProductCard 
+          name="Vegan Garden" 
+          price="7.99€" 
+          image="/images/vegan.jpg" 
+        />
+          <ProductCard 
+          name="Vegan Garden" 
+          price="7.99€" 
+          image="/images/vegan.jpg" 
+        />
+          
       </div>
     </section>
   );

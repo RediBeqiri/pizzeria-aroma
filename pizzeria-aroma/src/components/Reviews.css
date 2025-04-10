@@ -1,0 +1,50 @@
+/* Reviews Section Styling */
+.reviews-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Light background color for the reviews section */
+    text-align: center;
+  }
+  
+  .reviews-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4a4a4a; /* Darker text color for the heading */
+    margin-bottom: 40px;
+  }
+  
+  /* Container for the reviews */
+  .reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Individual review card */
+  .review-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-family: "Poppins", sans-serif; /* Consistent font */
+    color: #4a4a4a; /* Dark text color */
+  }
+  
+  .review-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .review-card .rating {
+    font-size: 1.5rem;
+    color: #f2a900; /* Warm yellow for the rating stars */
+    margin-bottom: 10px;
+  }
+  
+  .review-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #6b6b6b; /* Lighter text color for the comment */
+  }
+  

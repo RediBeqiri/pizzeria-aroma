@@ -1,30 +1,27 @@
 import React from 'react';
+import './Hero.css';
 
 const Hero = () => {
   return (
-    <section className="hero">
-      <div className="hero-left">
-        <h1 className="logo">Pizzeria <span className="brand">Aroma</span></h1>
-        <p className="hero-description">
-          Decism hackathon. Semisofi emkemi. Asan kuddbok. Bloppa Periscope.
-          Antropotet Pinterest. Uning inaskad. Paltkoma nettokrati. Ryggprotest
-          poligyn. Delningsekonomi gubyns.
+    <div className="hero">
+      <div className="hero-content">
+        <h3>Pizzeria</h3>
+        <h1>Aroma</h1>
+        <p>
+          Welcome to the best pizzeria in town! Try our delicious pizzas, made with love and fresh ingredients.
         </p>
         <div className="hero-buttons">
-          <button className="menu-btn">Our menu</button>
-          <button className="drinks-btn">Our drinks</button>
+          <button className="menu-btn">Our Menu</button>
+          <button className="drinks-btn">Our Drinks</button>
         </div>
       </div>
 
-      <div className="hero-right">
-        <div className="hero-shape">
-          <div className="hero-image"></div>
-        </div>
+      <div className="hero-image">
+        <div className="hero-image-placeholder"></div>
       </div>
-    </section>
+    
+    </div>
   );
 };
 
 export default Hero;
-
-
