@@ -94,7 +94,6 @@
   width: 100%;
   height: 100%; /* Ensure it takes up the full container height */
   background: #e0e0e0; /* Placeholder color */
-  background-image: url('../../public/Images/pizzeriaAroma.jpeg');
   background-size: cover; /* Ensures the image fills the div without overflow */
   background-position: center; /* Centers the image within the container */
   border-radius: 15px;

@@ -1,25 +1,25 @@
 import React from 'react';
+import pizzeriaImage from '../assets/images/pizzeriaAroma.jpeg'; // Import the image
 import './Hero.css';
 
 const Hero = () => {
   return (
     <div className="hero">
       <div className="hero-content">
-        <h3>Pizzeria</h3>
-        <h1>Aroma</h1>
-        <p>
-          Welcome to the best pizzeria in town! Try our delicious pizzas, made with love and fresh ingredients.
-        </p>
-        <div className="hero-buttons">
-          <button className="menu-btn">Our Menu</button>
-          <button className="drinks-btn">Our Drinks</button>
-        </div>
+        <h2>Welcome to Pizzeria Aroma</h2>
+        <h1>Your Favorite Pizzeria</h1>
+        <p>Delicious pizzas made with love and passion.</p>
+        {/* Your buttons */}
       </div>
 
-      <div className="hero-image">
-        <div className="hero-image-placeholder"></div>
+      <div className="hero-right-shape">
+        {/* Use an image tag directly */}
+        <img
+          src={pizzeriaImage}
+          alt="Pizzeria Aroma"
+          className="hero-image-placeholder"
+        />
       </div>
-    
     </div>
   );
 };
