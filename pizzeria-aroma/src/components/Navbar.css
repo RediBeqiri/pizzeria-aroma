@@ -1,0 +1,58 @@
+.navbar {
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffffcc; /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .navbar-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f2a900; /* Warm yellow */
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .navbar-links li {
+    font-size: 1.1rem;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 2px;
+  }
+  
+  .navbar-links a:hover {
+    color: green;
+    border-bottom: 2px solid #f2a900;
+  }
+  
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 15px 30px;
+    }
+  
+    .navbar-links {
+      gap: 20px;
+    }
+  
+    .navbar-logo {
+      font-size: 1.5rem;
+    }
+  }
+  
