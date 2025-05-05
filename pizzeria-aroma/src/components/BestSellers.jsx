@@ -1,5 +1,7 @@
 import React from 'react';
 import ProductCard from './ProductCard';
+import "./BestSellers.css"
+
 
 const BestSellers = () => {
   return (

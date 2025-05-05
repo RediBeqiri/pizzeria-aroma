@@ -1,102 +1,34 @@
-/* Hero container - Flex layout to arrange the content */
 .hero {
   display: flex;
+  flex-wrap: wrap; /* enables wrapping */
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  padding: 30px;
-  padding-left: 60px;
-  box-sizing: border-box;
-  background-color: #fafafa; /* Light, soft background color */
+  gap: 20px;
+  padding: 30px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fafafa;
 }
 
-/* Hero content - Family-friendly styling */
 .hero-content {
+  flex: 1 1 400px; /* allows shrinking and growing */
+  min-width: 300px; /* don’t shrink below this */
   max-width: 600px;
-  text-align: left;
-  color: #4a4a4a; /* Warm dark gray for text */
 }
 
-.hero-content h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #f2a900; /* Warm yellow color for the "Pizzeria" title */
-  margin: 0;
-}
-
-.hero-content h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  margin: 0.5rem 0;
-  color: green; /* Soft red color for "Aroma" */
-}
-
-.hero-content p {
-  font-size: 1.3rem;
-  line-height: 1.8;
-  margin: 20px 0;
-  font-family: "Poppins", sans-serif; /* Friendly and modern font */
-  color: #6b6b6b; /* Softer gray for paragraph text */
-}
-
-/* Hero buttons - Styled to be inviting */
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-/* Button styling */
-.hero-buttons button {
-  padding: 14px 30px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border: none;
-  border-radius: 25px;
-  transition: background-color 0.3s ease;
-  font-family: "Poppins", sans-serif; /* Same friendly font */
-}
-
-/* Styling for 'Our menu' button */
-.menu-btn {
-  background-color: #f2a900;
-  color: white;
-}
-
-.menu-btn:hover {
-  background-color: green;
-}
-
-/* Styling for 'Our drinks' button */
-.drinks-btn {
-  background-color: green;
-  color: white;
-}
-
-.drinks-btn:hover {
-  background-color: orange;
-}
-
-/* Hero right shape - Place for image */
 .hero-right-shape {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden; /* Ensures no image overflow */
-  height: 500px; /* Adjust height as needed */
-  width: 100%; /* Ensures the container takes full available width */
+  flex: 1 1 400px;
+  min-width: 300px;
+  max-width: 600px;
 }
 
-/* Placeholder image shape - Ensure the image fits */
 .hero-image-placeholder {
   width: 100%;
-  height: 100%; /* Ensure it takes up the full container height */
-  background: #e0e0e0; /* Placeholder color */
-  background-size: cover; /* Ensures the image fills the div without overflow */
-  background-position: center; /* Centers the image within the container */
+  height: auto;
+  aspect-ratio: 4/3;
+  background-image: url('../assets/images/pizzeriaAroma.jpeg');
+  background-size: cover;
+  background-position: center;
   border-radius: 15px;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
