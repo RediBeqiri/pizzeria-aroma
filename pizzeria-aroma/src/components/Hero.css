@@ -16,6 +16,7 @@
   max-width: 600px;
 }
 
+
 .hero-right-shape {
   flex: 1 1 400px;
   min-width: 300px;
@@ -23,12 +24,11 @@
 }
 
 .hero-image-placeholder {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4/3;
-  background-image: url('../assets/images/pizzeriaAroma.jpeg');
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: url('../assets/images/pizzeriaAroma.jpeg') center/cover no-repeat;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border: 6px solid #04573c;
 }
