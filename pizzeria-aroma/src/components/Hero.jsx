@@ -1,26 +1,21 @@
-import React from 'react';
-import pizzeriaImage from '../assets/images/pizzeriaAroma.jpeg'; // Import the image
-import './Hero.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div className="hero">
-            <div className="hero-content">
-                <h2>Welcome to Pizzeria Aroma</h2>
-                <h1>Your Favorite Pizzeria</h1>
-                <p>Delicious pizzas made with love and passion.</p>
-                {/* Your buttons */}
-            </div>
-
-            <div className="hero-right-shape">
-                {/* Use an image tag directly */}
-                <img
-                src={pizzeriaImage}
-                alt="Pizzeria Aroma"
-                className="hero-image-placeholder"
-                />
-            </div>
-        </div>
+    <section className="hero">
+      <img
+        src="/Images/PizzaHero.jpeg"  // Directly referencing the image in the public folder
+        alt="Delicious Pizza"
+        className="hero-image"
+      />
+      <div className="hero-content">
+        <h1 className="hero-title">Delicious Pizza Awaits</h1>
+        <p className="hero-subtitle">Fresh, hot, and made with love</p>
+        <Link to="/menu" className="hero-button">Order Now</Link>
+      </div>
+    </section>
   );
 };
 

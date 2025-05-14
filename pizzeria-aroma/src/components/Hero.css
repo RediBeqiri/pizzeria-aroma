@@ -1,34 +1,85 @@
+/* Ensure no horizontal scroll */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap; /* enables wrapping */
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  gap: 20px;
-  padding: 30px 60px;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #fafafa;
+  padding-right: 5%;
+  box-sizing: border-box;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  z-index: -1;  /* To make sure the text appears over the image */
+  object-fit: cover; /* This ensures the image fills the container without distorting */
 }
 
 .hero-content {
-  flex: 1 1 400px; /* allows shrinking and growing */
-  min-width: 300px; /* don’t shrink below this */
+  text-align: center;
   max-width: 600px;
+  color: white;
+  animation: fadeIn 1.5s ease-out forwards;
 }
 
-
-.hero-right-shape {
-  flex: 1 1 400px;
-  min-width: 300px;
-  max-width: 600px;
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: colorPulse 3s infinite alternate;
 }
 
-.hero-image-placeholder {
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: url('../assets/images/pizzeriaAroma.jpeg') center/cover no-repeat;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  border: 6px solid #04573c;
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  padding: 1rem 2rem;
+  background-color: #2e7d32; /* Dark green */
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  align-self: flex-end;
+}
+
+.hero-button:hover {
+  background-color: #43a047;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Subtle color animation */
+@keyframes colorPulse {
+  0% {
+    color: #ffffff;
+  }
+  100% {
+    color: #66bb6a;
+  }
 }
