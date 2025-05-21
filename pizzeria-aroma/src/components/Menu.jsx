@@ -7,17 +7,17 @@ const categories = [
     name: "Pizzas",
     image: "/images/pizza.jpg",
     products: [
-      { id: 1, name: "Margherita", description: "Tomato, mozzarella, basil", price: "€8.50" },
-      { id: 2, name: "Pepperoni", description: "Tomato, mozzarella, pepperoni", price: "€9.50" },
-      { id: 3, name: "Hawaiian", description: "Tomato, mozzarella, ham, pineapple", price: "€9.00" },
-      { id: 4, name: "Four Cheese", description: "Mozzarella, gorgonzola, parmesan, provolone", price: "€10.00" },
+      { id: 1, name: "Margherita", description: "Tomato, mozzarella, basil", price: "€8.50", image: "images/margarita.jpg"},
+      { id: 2, name: "Pepperoni", description: "Tomato, mozzarella, pepperoni", price: "€9.50", image: "/images/Pepperoni.jpg" },
+      { id: 3, name: "Hawaiian", description: "Tomato, mozzarella, ham, pineapple", price: "€9.00", image: "/images/hawaii.jpg"},
+      { id: 4, name: "Four Cheese", description: "Mozzarella, gorgonzola, parmesan, provolone", price: "€10.00",  },
     ],
   },
   {
     name: "Pastas",
     image: "/images/pasta.jpg",
     products: [
-      { id: 5, name: "Carbonara", description: "Cream, pancetta, parmesan", price: "€10.00" },
+      { id: 5, name: "Carbonara", description: "Cream, pancetta, parmesan", price: "€10.00", image: "images/carbonara.jpg" },
       { id: 6, name: "Bolognese", description: "Meat sauce, parmesan", price: "€9.00" },
       { id: 7, name: "Pesto", description: "Basil pesto, parmesan", price: "€9.50" },
       { id: 8, name: "Alfredo", description: "Cream sauce, chicken, parmesan", price: "€10.50" },
@@ -53,7 +53,7 @@ const Menu = ({ addToCart }) => {
                   name={product.name}
                   description={product.description}
                   price={product.price}
-                  image={category.image}
+                  image={product.image || category.image}
                   showOrderButton={true}
                   addToCart={addToCart}
                 />

@@ -1,4 +1,3 @@
-/* Ensure no horizontal scroll */
 body, html {
   margin: 0;
   padding: 0;
@@ -10,9 +9,9 @@ body, html {
   height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
-  padding-right: 5%;
+  padding-left: 5%;
   box-sizing: border-box;
 }
 
@@ -21,11 +20,11 @@ body, html {
   top: 0;
   left: 0;
   height: 100%;
-  width: auto;
-  z-index: -1;  /* To make sure the text appears over the image */
-  object-fit: cover; /* This ensures the image fills the container without distorting */
+  width: 100%;
+  object-fit: cover;
+  object-position: right center; 
+  z-index: -1;
 }
-
 .hero-content {
   text-align: center;
   max-width: 600px;
@@ -47,7 +46,7 @@ body, html {
 
 .hero-button {
   padding: 1rem 2rem;
-  background-color: #2e7d32; /* Dark green */
+  background-color: #d58712;
   color: white;
   font-size: 1.2rem;
   border: none;
@@ -59,7 +58,8 @@ body, html {
 }
 
 .hero-button:hover {
-  background-color: #43a047;
+  background-color: #c16808;
+  box-shadow: 0 6px 15px rgba(216, 146, 4, 0.5);
 }
 
 /* Fade-in animation */
@@ -80,6 +80,88 @@ body, html {
     color: #ffffff;
   }
   100% {
-    color: #66bb6a;
+    color: #d58712;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-button {
+    font-size: 1.1rem;
+    padding: 0.9rem 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center;
+    padding-right: 0;
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-content {
+    max-width: 90%;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .hero-image {
+    object-position: right center;
+    transform: scale(1.1); 
+    filter: brightness(0.4); 
+  }
+
+  .hero-content {
+    max-width: 90%;
+    color: white;
+    z-index: 1;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
   }
 }

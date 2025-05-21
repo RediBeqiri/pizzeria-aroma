@@ -15,54 +15,74 @@
     transition: all 0.3s ease;
     box-sizing: border-box;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
-  }
+}
   
-  .navbar.shrunk {
+.navbar.shrunk {
     padding: 0.5rem 2rem;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
-  }
+}
 
-  .navbar-logo a{
+.navbar-logo a {
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
-  }
-  /* Navbar Links */
-  .navbar-links {
+    font-size: 2rem;
+    transition: font-size 0.3s ease;
+    font-family:cursive;
+}
+
+.navbar.shrunk .navbar-logo a {
+    font-size: 1.3rem;
+}
+
+/* Navbar Links */
+.navbar-links {
     display: flex;
     gap: 2rem;
+    align-items: center;
   }
   
   .navbar-links li {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  .navbar-links a {
+  .nav-icon-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
+    font-size: 1.3rem;
+    transition: color 0.3s ease, transform 0.3s ease;
   }
   
-  .navbar-links a:hover {
+  .nav-icon-link:hover {
     color: #f1c40f;
     transform: scale(1.1);
   }
   
-  /* Cart Icon */
-  .cart-icon button {
+  .nav-label {
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+  }
+  
+/* Cart Icon */
+.cart-icon button {
     background: transparent;
     border: none;
     position: relative;
     cursor: pointer;
     transition: transform 0.3s ease;
-  }
-  
-  .cart-icon button:hover {
+    color: white;
+}
+
+.cart-icon button:hover {
     transform: scale(1.1);
-  }
-  
-  .cart-badge {
+}
+
+.cart-badge {
     position: absolute;
     top: -5px;
     right: -5px;
@@ -76,34 +96,75 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-  }
-  
-  /* Hover effect on the badge */
-  .cart-icon button:hover .cart-badge {
+}
+
+/* Hover effect on the badge */
+.cart-icon button:hover .cart-badge {
     background-color: #27ae60; /* Dark green when hovered */
-  }
-  
-  /* Shrunk navbar styling */
-  .navbar.shrunk .cart-icon button {
+}
+
+/* Shrunk navbar styling */
+.navbar.shrunk .cart-icon button {
     transform: scale(0.9); /* Slightly shrink cart button on scroll */
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
   }
   
-  /* Mobile View */
+  /* Mobile Nav */
   @media (max-width: 768px) {
-    .navbar {
-      padding: 1rem 1rem;
+    .hamburger {
+      display: block;
     }
   
     .navbar-links {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
       flex-direction: column;
-      gap: 1.2rem;
       align-items: center;
-      margin-top: 1rem;
+      gap: 1rem;
+      padding: 1rem 0;
+      display: none;
+      transition: all 0.3s ease;
+      z-index: 9;
     }
   
-    .cart-icon {
-      font-size: 1.8rem;
+    .navbar-links.open {
+      display: flex;
+    }
+  
+    .navbar-links li {
+      margin: 0;
+    }
+  
+    .nav-icon-link {
+      font-size: 1.4rem;
+    }
+  
+    .nav-label {
+      font-size: 0.85rem;
+    }
+  
+    .navbar.shrunk .hamburger {
+      transform: scale(0.9);
     }
   }
   
+  
+/* Extra Small Devices (Phones) */
+@media (max-width: 480px) {
+    .navbar-logo a {
+        font-size: 1.1rem;
+    }
+}
+
+
   

@@ -1,32 +1,52 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaBars, FaTimes, FaHome, FaBook, FaStar, FaShoppingCart } from "react-icons/fa";
 import "./Navbar.css";
 
-const Navbar = ({ cart, toggleCart }) => {
-  const [isShrunk, setIsShrunk] = useState(false);
+const Navbar = ({ cartCount, handleCartClick }) => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsShrunk(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const toggleDrawer = () => setDrawerOpen(!drawerOpen);
 
   return (
-    <nav className={`navbar ${isShrunk ? "shrunk" : ""}`}>
+    <nav className="navbar">
       <div className="navbar-logo">
         <Link to="/">Pizzeria Aroma</Link>
       </div>
-      <ul className="navbar-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/menu">Menu</Link></li>
-        <li><Link to="/reviews">Reviews</Link></li>
+
+      {/* Hamburger icon for mobile */}
+      <div className="hamburger" onClick={toggleDrawer}>
+        {drawerOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
+      {/* Desktop nav */}
+      <ul className={`navbar-links ${drawerOpen ? "open" : ""}`}>
+        <li>
+          <Link to="/" className="nav-icon-link" onClick={toggleDrawer}>
+            <FaHome />
+            <span className="nav-label">Home</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/menu" className="nav-icon-link" onClick={toggleDrawer}>
+            <FaBook />
+            <span className="nav-label">Menu</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/reviews" className="nav-icon-link" onClick={toggleDrawer}>
+            <FaStar />
+            <span className="nav-label">Reviews</span>
+          </Link>
+        </li>
         <li className="cart-icon">
-          <button onClick={toggleCart}>
-            <FaShoppingCart size={26} />
-            {cart.length > 0 && <span className="cart-badge">{cart.length}</span>}
+          <button onClick={() => {
+            toggleDrawer();
+            handleCartClick();
+          }} className="nav-icon-link">
+            <FaShoppingCart />
+            <span className="nav-label">Cart</span>
+            {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
           </button>
         </li>
       </ul>

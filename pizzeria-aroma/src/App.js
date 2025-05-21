@@ -7,17 +7,30 @@ import BestSellers from "./components/BestSellers";
 import Navbar from "./components/Navbar";
 import CartPanel from "./components/CartPanel";
 import "./App.css";
+import "./components/Footer"
+import Footer from "./components/Footer";
 
 const App = () => {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const addToCart = (item) => {
-    const newItem = { ...item, quantity: 1, comment: "" };
-    setCart((prev) => [...prev, newItem]);
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((cartItem) => cartItem.id === item.id);
+
+      if (existingItem) {
+        return prevCart.map((cartItem) =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            : cartItem
+        );
+      } else {
+        return [...prevCart, { ...item, quantity: 1, comment: "" }];
+      }
+    });
+
     setIsCartOpen(true);
   };
-  
 
   const toggleCart = () => {
     setIsCartOpen((prev) => !prev);
@@ -47,7 +60,7 @@ const App = () => {
         <Navbar cart={cart} toggleCart={toggleCart} />
         {isCartOpen && (
           <CartPanel
-            cart={cart}
+            cartItems={cart}
             updateCart={updateCart}
             isCartVisible={isCartOpen}
             closeCart={toggleCart}

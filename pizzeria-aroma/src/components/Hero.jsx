@@ -2,11 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Hero.css";
 
+const footer = () => {
+  return (
+    <section className="footer">
+      <h2>pizzeria Aroma</h2>
+      <p>📍Lützer Straße 14, 34439 Willebadessen</p>
+      <h3>📞05644/3059965</h3>
+    </section>
+  )
+}
+
 const Hero = () => {
   return (
     <section className="hero">
       <img
-        src="/Images/PizzaHero.jpeg"  // Directly referencing the image in the public folder
+        src="/Images/HeroBg2.jpg"
         alt="Delicious Pizza"
         className="hero-image"
       />
