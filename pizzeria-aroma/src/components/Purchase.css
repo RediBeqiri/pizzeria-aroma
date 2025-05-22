@@ -1,0 +1,43 @@
+/* Purchase.css */
+.purchase-container {
+    background-color: #1C1C1C;
+    color: #F1FAEE;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    padding-top: 6rem;
+  }
+  
+  .purchase-container h2 {
+    color: #d58712;
+    font-family: 'Righteous', cursive;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .purchase-history {
+    background-color: #2A2A2A;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .purchase-item {
+    border-bottom: 1px solid #444;
+    padding: 1rem 0;
+  }
+  
+  .purchase-item:last-child {
+    border-bottom: none;
+  }
+  
+  .purchase-item h4 {
+    margin: 0.3rem 0;
+    color: #d58712;
+  }
+  
+  .purchase-item small {
+    font-size: 0.85rem;
+    color: #888;
+  }
+  

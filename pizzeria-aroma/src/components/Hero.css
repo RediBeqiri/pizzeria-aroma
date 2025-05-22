@@ -10,8 +10,9 @@ body, html {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  padding-left: 5%;
+  align-items: flex-start;
+  padding-top: 15%;
+  padding-left: 7%;
   box-sizing: border-box;
 }
 
@@ -26,8 +27,8 @@ body, html {
   z-index: -1;
 }
 .hero-content {
-  text-align: center;
-  max-width: 600px;
+  text-align:center;
+  max-width: 800px;
   color: white;
   animation: fadeIn 1.5s ease-out forwards;
 }
@@ -41,7 +42,7 @@ body, html {
 
 .hero-subtitle {
   font-size: 1.3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
 }
 
 .hero-button {

@@ -11,6 +11,14 @@ const categories = [
       { id: 2, name: "Pepperoni", description: "Tomato, mozzarella, pepperoni", price: "€9.50", image: "/images/Pepperoni.jpg" },
       { id: 3, name: "Hawaiian", description: "Tomato, mozzarella, ham, pineapple", price: "€9.00", image: "/images/hawaii.jpg"},
       { id: 4, name: "Four Cheese", description: "Mozzarella, gorgonzola, parmesan, provolone", price: "€10.00",  },
+      { id: 5, name: "Four Cheese", description: "Mozzarella, gorgonzola, parmesan, provolone", price: "€10.00",  },
+      { id: 6, name: "Four Cheese", description: "Mozzarella, gorgonzola, parmesan, provolone", price: "€10.00",  },
+      { id: 7, name: "Four Cheese", description: "Mozzarella, gorgonzola, parmesan, provolone", price: "€10.00",  },
+      { id: 8, name: "Four Cheese", description: "Mozzarella, gorgonzola, parmesan, provolone", price: "€10.00",  },
+      { id: 9, name: "Four Cheese", description: "Mozzarella, gorgonzola, parmesan, provolone", price: "€10.00",  },
+      { id: 10, name: "Four Cheese", description: "Mozzarella, gorgonzola, parmesan, provolone", price: "€10.00",  },
+      { id: 11, name: "Four Cheese", description: "Mozzarella, gorgonzola, parmesan, provolone", price: "€10.00",  },
+
     ],
   },
   {
