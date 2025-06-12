@@ -1,52 +1,41 @@
-# === Node.js ===
+# ========== Node modules ==========
 node_modules/
+
+# ========== Byggfiler ==========
+build/
+dist/
+
+# ========== Miljøfiler ==========
+.env
+.env.*.local
+
+# ========== Loggfiler ==========
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
 
-# === React (CRA) ===
-build/
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# ========== Midlertidige filer ==========
+*.tmp
+*.temp
+*.bak
+*.swp
 
-# === Testing ===
-coverage/
-jest.config.js
-.vitest/
-
-# === Logs ===
-logs/
-*.log
-
-# === OS / System-filer ===
-.DS_Store
-Thumbs.db
-
-# === VS Code / IDE ===
+# ========== Editor/IDE ==========
 .vscode/
 .idea/
 
-# === Temporary files ===
-*.swp
-*.tmp
-*.bak
+# ========== OS-filer ==========
+.DS_Store
+Thumbs.db
 
-# === Design / media working files (optional) ===
+# ========== Testing ==========
+coverage/
+jest.config.js
+
+# ========== Design og store mediafiler (valgfritt) ==========
 *.psd
 *.ai
 *.xd
-*.sketch
 *.fig
-*.xcf
-
-# === Misc ===
-*.tgz
-*.zip
-
-# === Git ===
-.git/
 
